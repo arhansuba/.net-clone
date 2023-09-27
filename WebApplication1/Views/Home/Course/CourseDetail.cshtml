@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.NET MVC Web Geliştirme Kursu</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>.NET MVC Web Geliştirme Kursu </h1>
+    </header>
+
+    
+    <section>
+        <a href="@Url.Action("ProcessPayment", "Payment")">Ödeme Yap</a>
+
+        <h2>Kurs Detayı:</h2>
+        <p>Bölüm 1: Temel .NET ve MVC Kavramları
+
+.NET ve MVC'nin Temelleri
+Visual Studio Kurulumu ve Temel Kullanım
+MVC Model-View-Controller Mimarisinin Anlaşılması
+Bölüm 2: C# Programlama Temelleri
+
+C# Dilinin Temelleri
+Veri Tipleri ve Değişkenler
+Kontrol Yapıları ve Döngüler
+Fonksiyonlar ve Sınıflar
+Bölüm 3: MVC Projesinin Oluşturulması
+
+MVC Projesi Kurulumu
+Controller, View ve Model Kavramları
+Temel URL Yönlendirmesi ve Routing
+Bölüm 4: Veri Tabanı İşlemleri
+
+Entity Framework Kullanımı
+Veri Tabanı Modellemesi ve Migrations
+CRUD İşlemleri (Create, Read, Update, Delete)
+Bölüm 5: View Oluşturma ve Tema Tasarımı
+
+Razor View Engine Kullanımı
+HTML ve CSS Temelleri
+View'da Veri Gösterme ve Form İşlemleri
+Bölüm 6: Kimlik Doğrulama ve Yetkilendirme
+
+Kimlik Doğrulama ve Yetkilendirme İlkeleri
+ASP.NET Identity Kullanımı
+Rol Tabanlı Yetkilendirme
+Bölüm 7: API Geliştirme
+
+RESTful API Kavramları
+API Controller Oluşturma
+Veri Paylaşımı ve API Dökümantasyonu
+Bölüm 8: Uygulama Dağıtımı ve Yayınlama
+
+Azure veya Heroku Kullanarak Uygulamanın Yayınlanması
+Performans İyileştirmeleri ve Güvenlik Önerileri
+Bölüm 9: MVC Uygulamasının Gelişmiş Konuları
+
+Dependency Injection ve IOC Kavramları
+Testing ve Debugging İlkeleri
+Front-End Framework Entegrasyonu (örneğin, React veya Angular)
+Kurs Açıklaması:
+
+Bu .NET MVC Web Geliştirme Kursu, web uygulamaları geliştirmek isteyenler için kapsamlı bir rehber sunar. Kurs, .NET ve MVC'nin temellerinden başlayarak, C# programlama dilini kullanarak gerçek dünya uygulamaları oluşturmayı öğretir.
+
+Kurs boyunca, öğrenciler MVC mimarisini anlayacaklar, veri tabanı işlemleri gerçekleştirecekler, kullanıcı kimlik doğrulama ve yetkilendirme işlemlerini öğrenecekler ve RESTful API'lar oluşturmayı öğrenecekler. Ayrıca, uygulamanın performansını iyileştirmek ve güvenliğini artırmak için en iyi uygulamaları öğrenmek için ileri düzey konuları da ele alacaklar.
+
+Bu kurs, hem yeni başlayanlar hem de deneyimli geliştiriciler için uygundur. Sıfırdan başlayarak ileri düzeydeki konuları öğrenmek isteyen herkes için mükemmel bir kaynaktır. Eğitmenlerimiz, gerçek dünya projeleri üzerinden örnekler sunarak öğrencilere pratik deneyim kazandırmayı hedefler.
+
+Kurs sonunda, .NET MVC ile web uygulamaları geliştirmek için gerekli bilgi ve becerilere sahip olacaksınız. Kendi projelerinizi oluşturabilir, mevcut projelere katkıda bulunabilir ve iş dünyasında değerli bir web geliştirici olarak kariyer yapabilirsiniz.
+
+
+
+
+
+
+</p>
+        <ul>
+            <li><strong>Fiyat:</strong> $19.99</li>
+            <li><strong>Süre:</strong> 10 Hafta</li>
+            <li><strong>Özellikler:</strong> Web Geliştirme</li>
+        </ul>
+    </section>
+
+    <!-- Satın Alma Düğmesi -->
+    <section>
+        <form action="satinal.php" method="POST"> <!-- Satın alma işlemi için uygun bir form işlevi eklemelisiniz -->
+            <input type="hidden" name="course_id" value="1"> <!-- Kurs kimlik numarasını göndermek için bir gizli alan -->
+            <button type="submit">Satın Al</button>
+        </form>
+    </section>
+
+    <!-- Alt Bilgi -->
+    <footer>
+        <p>&copy; 2023  .NET MVC Web Geliştirme Kurs Detayı </p>
+    </footer>
+</body>
+</html>

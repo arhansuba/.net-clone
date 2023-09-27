@@ -1,0 +1,6 @@
+services.AddDbContext<ApplicationDbContext>(options =>
+{
+  options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+});
+
+Database.Create(Configuration.GetConnectionString("DefaultConnection"));

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödeme İşlemleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="text"]:focus {
+            border-color: #007bff;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kurs Satın Alma</h1>
+    <form action="/Payment/ProcessPayment" method="post">
+        <!-- Kredi Kartı Bilgileri -->
+        <label for="cardNumber">Kredi Kartı Numarası:</label>
+        <input type="text" id="cardNumber" name="cardNumber" required>
+
+        <label for="cardName">Kart Sahibi Adı:</label>
+        <input type="text" id="cardName" name="cardName" required>
+
+        <label for="expiryDate">Son Kullanma Tarihi:</label>
+        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" required>
+
+        <!-- Fiyat Bilgisi -->
+        <label for="price">Toplam Fiyat:</label>
+        <input type="text" id="price" name="price" value="19.99" readonly>
+
+        <!-- Ödeme Butonu -->
+        <button type="submit">Ödeme Yap</button>
+    </form>
+</body>
+</html>
+
+<body>
+    <h1>Kurs Satın Alma</h1>
+    <form action="/Payment/ProcessPayment" method="post">
+        
+        <label for="cardNumber">Kredi Kartı Numarası:</label>
+        <input type="text" id="cardNumber" name="cardNumber" required>
+
+        <label for="cardName">Kart Sahibi Adı:</label>
+        <input type="text" id="cardName" name="cardName" required>
+
+        <label for="expiryDate">Son Kullanma Tarihi:</label>
+        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" required>
+
+        
+        <label for="price">Toplam Fiyat:</label>
+        <input type="text" id="price" name="price" value="19.99" readonly>
+
+        
+        <button type="submit">Ödeme Yap</button>
+    </form>
+</body>
+</html>
