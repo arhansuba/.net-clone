@@ -170,3 +170,13 @@ Kurs sonunda, .NET MVC ile web uygulamaları geliştirmek için gerekli bilgi ve
     </footer>
 </body>
 </html>
+@model List<Course>
+
+<h1>Courses</h1>
+
+<ul>
+    @foreach (var course in Model)
+    {
+        <li>@course.CourseName</li>
+    }
+</ul>

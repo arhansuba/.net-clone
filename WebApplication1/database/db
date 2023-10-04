@@ -1,6 +1,12 @@
-services.AddDbContext<ApplicationDbContext>(options =>
+public class YourDbContext : DbContext
 {
-  options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
-});
+    public DbSet<Courses> Courses { get; set; }
+    public DbSet<MyCourse> MyCourses { get; set; }
+    public DbSet<Payment> Payments { get; set; }
+    public DbSet<Profile> Profiles { get; set; }
+    public DbSet<UserProfile> UserProfiles { get; set; }
 
-Database.Create(Configuration.GetConnectionString("DefaultConnection"));
+    
+}
+
+
