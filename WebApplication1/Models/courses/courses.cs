@@ -1,13 +1,28 @@
-
 using YourNamespace;
 
 public class Course
 {
     public int Id { get; set; }
     public required string CourseName { get; set; }
-    
 }
-// CourseController.cs
+
+public class YourDbContext : DbContext
+{
+    public required DbSet<Course> Courses { get; set; }
+}
+
+public class DbSet<T>
+{
+    internal string? ToList()
+    {
+        throw new NotImplementedException();
+    }
+}
+
+public class DbContext
+{
+}
+
 public class CourseController : Microsoft.AspNetCore.Mvc.Controller
 {
     private readonly YourDbContext _dbContext;
@@ -23,4 +38,5 @@ public class CourseController : Microsoft.AspNetCore.Mvc.Controller
         return View(courses);
     }
 }
+
 

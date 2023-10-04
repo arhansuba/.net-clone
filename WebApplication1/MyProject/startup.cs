@@ -1,3 +1,17 @@
+using Microsoft.EntityFrameWorkCore;
+
+internal class YourDbContext : DbContext
+{
+    public YourDbContext()
+    {
+        Courses = new List<Course>(); 
+    }
+
+    public required object Courses { get; set; }
+
+    internal string? Courses => Courses.Select(c => c.CourseName).ToList();
+}
+
 namespace YourNamespace
 {
     public class Startup
@@ -41,8 +55,16 @@ namespace YourNamespace
         }
     }
 
-    internal class YourDbContext
+    internal class YourDbContext : DbContext
+{
+    public YourDbContext()
     {
-        public object Courses { get; internal set; }
+        Courses = new List<Course>(); 
     }
+
+    public required object Courses { get;  set; }
+
+        
+
+}
 }

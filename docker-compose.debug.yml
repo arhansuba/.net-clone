@@ -1,0 +1,13 @@
+
+version: '3.4'
+
+services:
+  netclone:
+    image: netclone
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        - configuration=Debug
+    volumes:
+      - ~/.vsdbg:c:\remote_debugger:rw

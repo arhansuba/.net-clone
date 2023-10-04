@@ -1,0 +1,9 @@
+
+version: '3.4'
+
+services:
+  netclone:
+    image: netclone
+    build:
+      context: .
+      dockerfile: ./Dockerfile
